@@ -1,0 +1,12 @@
+query organizationInfo($login:String!) {
+    organization(login:$login) {
+    pendingMembers(first: 100) {
+      edges {
+        node {
+          name
+          avatarUrl
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+query repositoryPullReqest($owner:String!, name:String!){
+    repository($owner:owner, name:name) {
+    pullRequests(last: 10) {
+      edges {
+        node {
+          number
+          mergeable
+        }
+      }
+    }
+  }
+}
